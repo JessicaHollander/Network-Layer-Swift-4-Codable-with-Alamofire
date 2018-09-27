@@ -10,13 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     var presenter: Presenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = Presenter()
         presenter.setUpView(vc: self)
 
     }
-
-
 }
 
