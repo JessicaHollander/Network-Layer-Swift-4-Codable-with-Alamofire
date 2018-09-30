@@ -14,9 +14,6 @@
 		68E92B8C215D5FBC00080A54 /* Open_WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E92B8B215D5FBC00080A54 /* Open_WeatherTests.swift */; };
 		68E92B97215D5FBC00080A54 /* Open_WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E92B96215D5FBC00080A54 /* Open_WeatherUITests.swift */; };
 		68E92BA5215D603A00080A54 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E92BA4215D603A00080A54 /* Presenter.swift */; };
-		68E92BAB215D6A3900080A54 /* API Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E92BAA215D6A3900080A54 /* API Configuration.swift */; };
-		68E92BAD215D6A7000080A54 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E92BAC215D6A7000080A54 /* Endpoint.swift */; };
-		68E92BAF215D6A8400080A54 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E92BAE215D6A8400080A54 /* Client.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +47,6 @@
 		68E92B96215D5FBC00080A54 /* Open_WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Open_WeatherUITests.swift; sourceTree = "<group>"; };
 		68E92B98215D5FBC00080A54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68E92BA4215D603A00080A54 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		68E92BAA215D6A3900080A54 /* API Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Configuration.swift"; sourceTree = "<group>"; };
-		68E92BAC215D6A7000080A54 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		68E92BAE215D6A8400080A54 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +97,6 @@
 		68E92B75215D5FBA00080A54 /* Open Weather */ = {
 			isa = PBXGroup;
 			children = (
-				68E92BA8215D676A00080A54 /* Service */,
 				68E92BA9215D678500080A54 /* Controller */,
 				68E92BA6215D674000080A54 /* View */,
 				68E92B76215D5FBA00080A54 /* AppDelegate.swift */,
@@ -138,16 +131,6 @@
 				68E92B7F215D5FBC00080A54 /* LaunchScreen.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		68E92BA8215D676A00080A54 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				68E92BAA215D6A3900080A54 /* API Configuration.swift */,
-				68E92BAC215D6A7000080A54 /* Endpoint.swift */,
-				68E92BAE215D6A8400080A54 /* Client.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		68E92BA9215D678500080A54 /* Controller */ = {
@@ -288,12 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68E92BAB215D6A3900080A54 /* API Configuration.swift in Sources */,
 				68E92BA5215D603A00080A54 /* Presenter.swift in Sources */,
-				68E92BAF215D6A8400080A54 /* Client.swift in Sources */,
 				68E92B79215D5FBA00080A54 /* ViewController.swift in Sources */,
 				68E92B77215D5FBA00080A54 /* AppDelegate.swift in Sources */,
-				68E92BAD215D6A7000080A54 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
