@@ -44,6 +44,7 @@ enum WeatherEndpoint: APIConfiguration {
         switch self {
         case .current(let cityId, let unit):
             return "/weather?id=\(cityId)&units=\(unit)&APPID=\(Constants.APIParameterKey.apiKey)"
+            
         case .forecast(let cityId, let unit):
             return "/forecast?id=\(cityId)&units=\(unit)&APPID=\(Constants.APIParameterKey.apiKey)"
         }
@@ -59,10 +60,9 @@ enum WeatherEndpoint: APIConfiguration {
     
     // MARK: - URLRequestConvertible
     func asURLRequest() throws -> URLRequest {
-        let url = try Constants.ProductionServer.baseURL.asURL()
-        
-        var urlRequest = URLRequest(url: url.appendingPathComponent(path))
-        
+        let url = Constants.ProductionServer.baseURL + path
+    
+        var urlRequest = URLRequest(url: URL(string: url)!)
         // HTTP Method
         urlRequest.httpMethod = method.rawValue
         
@@ -78,7 +78,7 @@ enum WeatherEndpoint: APIConfiguration {
                 throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
             }
         }
-        
+        debugPrint(urlRequest)
         return urlRequest
     }
 }
