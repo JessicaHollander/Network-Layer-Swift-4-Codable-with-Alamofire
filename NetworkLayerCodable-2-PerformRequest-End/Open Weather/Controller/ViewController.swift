@@ -15,6 +15,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         presenter = Presenter()
         presenter.setUpView(vc: self)
+        WeatherClient.getCurrentWeather(cityId: 3451190, unit: "metric"){ results, error in
+            if results != nil{
+                self.presenter.cityLabel.text = "\(results!.name)"
+                self.presenter.weatherLabel.text = "\(results!.main.temp)" + "°C"
+                
+            } else{
+            print("no results")
+            }
+        }
     }
 }
 
